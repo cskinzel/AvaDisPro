@@ -32,7 +32,8 @@ AvaDisPro is a support tool for selecting probability distributions. Given an in
 
 ## 📸 Screenshots
 
-To view AvaDisPro screenshots, [click here](#).
+![User source data](screenshots/user-source-data.jpg)
+
 
 ## ⬇️ Download
 
