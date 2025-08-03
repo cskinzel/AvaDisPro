@@ -1,0 +1,85 @@
+object FResultado: TFResultado
+  Left = 0
+  Top = 0
+  Width = 257
+  Height = 215
+  VertScrollBar.Range = 210
+  HorzScrollBar.Range = 257
+  TabOrder = 0
+  object MResultado: TMemo
+    Left = 0
+    Top = 21
+    Width = 257
+    Height = 159
+    BorderStyle = bsSingle
+    Font.Color = clBlack
+    Font.Height = 11
+    Font.Name = 'Courier New'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object PQuiQuadrado: TPanel
+    Left = 0
+    Top = 0
+    Width = 257
+    Height = 22
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    Color = clDark
+    ParentColor = False
+    TabOrder = 1
+    object LResultado: TLabel
+      Left = 91
+      Top = 2
+      Width = 75
+      Height = 18
+      Caption = 'Resultado'
+      Font.CharSet = fcsLatin1
+      Font.Color = clWhite
+      Font.Height = 15
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object BDetalhes: TButton
+    Left = 39
+    Top = 186
+    Width = 75
+    Height = 24
+    Hint = 'Mostra os resultados dos testes realizados em detalhes.'
+    Caption = 'D&etalhes'
+    Font.Color = clBlack
+    Font.Height = 11
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    ParentFont = False
+    TabOrder = 2
+    OnClick = BDetalhesClick
+  end
+  object BLimpar: TButton
+    Left = 143
+    Top = 186
+    Width = 75
+    Height = 24
+    Hint = 'Limpa o conte'#250'do dos resultados gerados.'
+    Caption = '&Limpar'
+    Font.Color = clBlack
+    Font.Height = 11
+    Font.Name = 'Verdana'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    ParentFont = False
+    TabOrder = 3
+    OnClick = BLimparClick
+  end
+end

@@ -1,0 +1,69 @@
+object FConjuntoDados: TFConjuntoDados
+  Left = 0
+  Top = 0
+  Width = 165
+  Height = 347
+  VertScrollBar.Range = 347
+  HorzScrollBar.Range = 165
+  Color = clButton
+  ParentColor = False
+  TabOrder = 0
+  object LVDados: TListView
+    Left = 0
+    Top = 21
+    Width = 165
+    Height = 326
+    BorderStyle = bsSingle
+    Columns = <
+      item
+        Caption = 'Ordem'
+        MaxWidth = 100
+        MinWidth = 20
+        Width = 50
+      end
+      item
+        Caption = 'Valor'
+        MaxWidth = 200
+        MinWidth = 50
+        Width = 95
+      end>
+    DragMode = dmAutomatic
+    Font.Color = clBlack
+    Font.Height = 11
+    Font.Name = 'MS Shell Dlg'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    RowSelect = True
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnColumnClick = LVDadosColumnClick
+  end
+  object PConjunto: TPanel
+    Left = 0
+    Top = 0
+    Width = 165
+    Height = 22
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    Color = clDark
+    ParentColor = False
+    TabOrder = 1
+    object LConjunto: TLabel
+      Left = 13
+      Top = 2
+      Width = 138
+      Height = 18
+      Caption = 'Conjunto de Dados'
+      Font.CharSet = fcsLatin1
+      Font.Color = clWhite
+      Font.Height = 15
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+end

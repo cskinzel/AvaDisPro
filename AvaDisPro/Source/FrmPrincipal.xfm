@@ -1,0 +1,454 @@
+object FormPrincipal: TFormPrincipal
+  Left = 301
+  Top = 90
+  Width = 675
+  Height = 549
+  VertScrollBar.Range = 526
+  HorzScrollBar.Range = 675
+  ActiveControl = FAgrup.LVClasse
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'AvaDisPro 1.0'
+  Color = clSilver
+  Font.Color = clBlack
+  Font.Height = 11
+  Font.Name = 'MS Sans Serif'
+  Font.Pitch = fpVariable
+  Font.Style = []
+  Font.Weight = 40
+  Menu = MainMenu
+  ParentFont = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  TextWidth = 6
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 507
+    Width = 675
+    Height = 19
+    Panels = <
+      item
+      end>
+  end
+  inline FResumo: TFResumo
+    Left = 0
+    Top = 346
+    Width = 165
+    Height = 159
+    VertScrollBar.Range = 159
+    HorzScrollBar.Range = 165
+    Color = clButton
+    ParentColor = False
+    TabOrder = 1
+  end
+  inline FConjuntoDados: TFConjuntoDados
+    Left = 0
+    Top = 0
+    Width = 165
+    Height = 347
+    VertScrollBar.Range = 347
+    HorzScrollBar.Range = 165
+    Color = clButton
+    ParentColor = False
+    TabOrder = 2
+  end
+  inline FResul: TFResultado
+    Left = 418
+    Top = 292
+    Width = 257
+    Height = 215
+    VertScrollBar.Range = 210
+    HorzScrollBar.Range = 257
+    TabOrder = 3
+  end
+  inline FKS: TFKS
+    Left = 418
+    Top = 146
+    Width = 257
+    Height = 147
+    VertScrollBar.Range = 147
+    HorzScrollBar.Range = 257
+    TabOrder = 4
+  end
+  inline FQuiQuad: TFQuiQuadrado
+    Left = 418
+    Top = 0
+    Width = 257
+    Height = 147
+    VertScrollBar.Range = 147
+    HorzScrollBar.Range = 257
+    TabOrder = 5
+  end
+  inline FAgrup: TFAgrup
+    Left = 175
+    Top = 0
+    Width = 230
+    Height = 507
+    VertScrollBar.Range = 507
+    HorzScrollBar.Range = 230
+    TabOrder = 6
+    inherited GBAgrup: TGroupBox
+      inherited SEIntervalo: TSpinEdit
+        Max = 50
+      end
+    end
+  end
+  object MainMenu: TMainMenu
+    Left = 3
+    Top = 318
+    object MArquivo: TMenuItem
+      Caption = 'Arquivo '
+      object MIAbrirDados: TMenuItem
+        Caption = 'Abrir Dados Tabulados'
+        Hint = 'Abre um arquivo de dados tabulado em agrupamentos.'
+        ShortCut = 16468
+        OnClick = MIAbrirDadosClick
+      end
+      object MIAbrirDadosBrutos: TMenuItem
+        Caption = '&Abrir Dados Brutos'
+        Hint = 'Abre um arquivo de dados brutos do usu'#225'rio.'
+        ShortCut = 16450
+        OnClick = MIAbrirDadosClick
+      end
+      object MIFechar: TMenuItem
+        Tag = 50
+        Caption = '&Fechar'
+        Hint = 'Fecha o arquivo de dados do usu'#225'rio e encerra a se'#231#227'o atual.'
+        ShortCut = 16454
+        OnClick = MIFecharClick
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object MISair: TMenuItem
+        Caption = '&Sair'
+        Hint = 'Finaliza o sistema.'
+        ShortCut = 16472
+        OnClick = MISairClick
+      end
+    end
+    object MVer: TMenuItem
+      Caption = 'Ver '
+      object MIVisualizar: TMenuItem
+        Tag = 50
+        Caption = '&Arquivo de Dados'
+        Hint = 'Abre uma janela mostrando o arquivo de dados de origem.'
+        OnClick = MIVisualizarClick
+      end
+      object MIGrafico: TMenuItem
+        Tag = 50
+        Caption = '&Gr'#225'fico'
+        Hint = 'Abre uma janela com um gr'#225'fico do agrupamento de dados.'
+        ShortCut = 16455
+        OnClick = MIGraficoClick
+      end
+    end
+    object MOpcoes: TMenuItem
+      Caption = 'Op'#231#245'es '
+      object MCasasDecimais: TMenuItem
+        Caption = '&Casas Decimais'
+        Hint = 'Altera o n'#250'mero de casas decimais utilizadas pelo AvaDisPro.'
+        object MI1: TMenuItem
+          Tag = 1
+          Caption = '&1'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI2: TMenuItem
+          Tag = 2
+          Caption = '&2'
+          Checked = True
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI3: TMenuItem
+          Tag = 3
+          Caption = '&3'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI4: TMenuItem
+          Tag = 4
+          Caption = '&4'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI5: TMenuItem
+          Tag = 5
+          Caption = '&5'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI6: TMenuItem
+          Tag = 6
+          Caption = '&6'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI7: TMenuItem
+          Tag = 7
+          Caption = '&7'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI8: TMenuItem
+          Tag = 8
+          Caption = '&8'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI9: TMenuItem
+          Tag = 9
+          Caption = '&9'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI10: TMenuItem
+          Tag = 10
+          Caption = '1&0'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI11: TMenuItem
+          Tag = 11
+          Caption = '11'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI12: TMenuItem
+          Tag = 12
+          Caption = '12'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI13: TMenuItem
+          Tag = 13
+          Caption = '13'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+        object MI14: TMenuItem
+          Tag = 14
+          Caption = '14'
+          RadioItem = True
+          OnClick = MITipoDadoClick
+        end
+      end
+      object MTipoDado: TMenuItem
+        Caption = '&Tipo de Dado'
+        Hint = 'Permite escolher o tipo de dado utilizado pelo sistema.'
+        object MIContinuo: TMenuItem
+          Caption = 'Cont'#237'nuo'
+          Checked = True
+          Hint = 
+            'Selecione esta op'#231#227'o se o seu conjunto de dados for cont'#237'nuo (ou' +
+            ' se quiser consid'#225'-lo cont'#237'nuo).'
+          RadioItem = True
+          ShortCut = 16451
+          OnClick = MITipoDadoClick
+        end
+        object MIDiscreto: TMenuItem
+          Caption = 'Discreto'
+          Hint = 
+            'Selecione esta op'#231#227'o se o seu conjunto de dados for discreto (ou' +
+            ' se quiser consider'#225'-lo discreto).'
+          RadioItem = True
+          ShortCut = 16452
+          OnClick = MITipoDadoClick
+        end
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object MExecAuto: TMenuItem
+        Caption = '&Executar Automaticamente'
+        Hint = 'Possibilita executar algumas op'#231#245'es de maneira autom'#225'tica.'
+        object MIExecutarK2: TMenuItem
+          Caption = '&Qui-Quadrado'
+          Hint = 
+            'Marque esta op'#231#227'o para executar automaticamente o teste Qui-Quad' +
+            'rado.'
+          OnClick = MIExecutarTestesClick
+        end
+        object MIExecutarKS: TMenuItem
+          Caption = '&K-S'
+          Hint = 'Marque esta op'#231#227'o para executar automaticamente o teste K-S.'
+          OnClick = MIExecutarTestesClick
+        end
+      end
+    end
+    object MDistribuicao: TMenuItem
+      Caption = 'Distribui'#231#245'es '
+      object MContinuas: TMenuItem
+        Caption = '&Cont'#237'nuas'
+        Hint = 
+          'Exibe o conjunto de distribui'#231#245'es cont'#237'nuas implementadas pelo A' +
+          'vaDisPro.'
+        object MIExponencial: TMenuItem
+          Tag = 21
+          Caption = '&Exponencial'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Exponencial e exec' +
+            'utar os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MILoglogistic: TMenuItem
+          Tag = 22
+          Caption = '&Log-logistic'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Log-logistic e exe' +
+            'cutar os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MIGama: TMenuItem
+          Tag = 23
+          Caption = '&Gama'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Gama e executar os' +
+            ' testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MINormal: TMenuItem
+          Tag = 24
+          Caption = '&Normal'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Normal e executar ' +
+            'os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MITriangular: TMenuItem
+          Tag = 25
+          Caption = '&Triangular'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Triangular e execu' +
+            'tar os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MIUniforme: TMenuItem
+          Tag = 26
+          Caption = '&Uniforme'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Uniforme e executa' +
+            'r os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MIWeibull: TMenuItem
+          Tag = 27
+          Caption = '&Weibull'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Weibull e executar' +
+            ' os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+      end
+      object MDiscretas: TMenuItem
+        Caption = '&Discretas'
+        Hint = 
+          'Exibe o conjunto de distribui'#231#245'es discretas implementadas pelo A' +
+          'vaDisPro.'
+        object MIBinomial: TMenuItem
+          Tag = 28
+          Caption = '&Binomial'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Binomial e executa' +
+            'r os testes K-S e Qui-Quadrado.'
+          OnClick = MIDistroClick
+        end
+        object MIBinomialN: TMenuItem
+          Tag = 29
+          Caption = 'Binomial &Negativa'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Binomial Negativa ' +
+            'e executar os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MIGeometrica: TMenuItem
+          Tag = 30
+          Caption = '&Geom'#233'trica'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Geom'#233'trica e execu' +
+            'tar os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MIPoisson: TMenuItem
+          Tag = 31
+          Caption = '&Poisson'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Poisson e executar' +
+            ' os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+        object MIUniformeD: TMenuItem
+          Tag = 32
+          Caption = '&Uniforme Discreta'
+          Hint = 
+            'Permite alterar os par'#226'metros da distribui'#231#227'o Uniforme Discreta ' +
+            'e executar os testes K-S e Qui-Quadrado para essa distribui'#231#227'o.'
+          OnClick = MIDistroClick
+        end
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object MICPAvaDisPro: TMenuItem
+        Caption = 'C&P-AvaDisPro'
+        Hint = 'Abre o CP-AvaDisPro (C'#225'lculo de Probabilidade do AvaDisPro).'
+        ShortCut = 16464
+        OnClick = MICPAvaDisProClick
+      end
+    end
+    object MTestes: TMenuItem
+      Caption = 'Testes'
+      object MIQuiQuadrado: TMenuItem
+        Tag = 50
+        Caption = '&Qui-Quadrado'
+        Hint = 
+          'Executa o teste Qui-Quadrado para todas distribui'#231#245'es do tipo de' +
+          ' dado em uso.'
+        ShortCut = 16465
+        OnClick = MIQuiQuadradoClick
+      end
+      object MIKS: TMenuItem
+        Tag = 50
+        Caption = '&K-S'
+        Hint = 
+          'Executa o teste K-S (Kolmogorov-Smirnov)  para todas distribui'#231#245 +
+          'es do tipo de dado em uso.'
+        ShortCut = 16459
+        OnClick = MIQuiQuadradoClick
+      end
+    end
+    object MAjuda: TMenuItem
+      Caption = 'A&juda '
+      object IMConteudo: TMenuItem
+        Caption = '&Conte'#250'do'
+        Hint = 'Clique aqui para ler a ajuda do AvaDisPro.'
+        ShortCut = 4144
+        OnClick = IMSobreClick
+      end
+      object IMLicenca: TMenuItem
+        Caption = '&Licen'#231'a de Uso'
+        Hint = 'Mostra a licen'#231'a de uso do AvaDisPro.'
+        OnClick = IMSobreClick
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object IMSobre: TMenuItem
+        Caption = '&Sobre'
+        Hint = 'Sobre o autor deste sistema.'
+        OnClick = IMSobreClick
+      end
+    end
+  end
+  object ODDados: TOpenDialog
+    DefaultExt = '*.txt'
+    Filter = '*.txt|*.*'
+    Options = [ofExtensionDifferent, ofPathMustExist, ofFileMustExist, ofEnableSizing]
+    Title = 'Abrir Conjunto de Dados'
+    Left = 35
+    Top = 318
+  end
+end

@@ -1,0 +1,108 @@
+object FKS: TFKS
+  Left = 0
+  Top = 0
+  Width = 257
+  Height = 147
+  VertScrollBar.Range = 147
+  HorzScrollBar.Range = 257
+  TabOrder = 0
+  object PKS: TPanel
+    Left = 0
+    Top = 0
+    Width = 257
+    Height = 45
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    Color = clDark
+    ParentColor = False
+    TabOrder = 0
+    object LKS: TLabel
+      Left = 9
+      Top = 3
+      Width = 201
+      Height = 18
+      Caption = 'Kolmogorov-Smirnov (K-S)'
+      Font.CharSet = fcsLatin1
+      Font.Color = clWhite
+      Font.Height = 15
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object LDistro: TLabel
+      Left = 9
+      Top = 27
+      Width = 193
+      Height = 16
+      Alignment = taCenter
+      Caption = 'Distribuicao Binomial Negativa'
+      Font.CharSet = fcsLatin1
+      Font.Color = clWhite
+      Font.Height = 13
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object LKS2: TLabel
+      Left = 115
+      Top = 14
+      Width = 26
+      Height = 18
+      Caption = 'K-S'
+      Font.CharSet = fcsLatin1
+      Font.Color = clWhite
+      Font.Height = 15
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object LVKS: TListView
+    Left = 0
+    Top = 44
+    Width = 257
+    Height = 103
+    BorderStyle = bsSingle
+    Columns = <
+      item
+        Caption = 'Id'
+        Width = 28
+      end
+      item
+        Alignment = taRightJustify
+        Caption = '         ei '
+        MaxWidth = 100
+        MinWidth = 52
+        Width = 52
+      end
+      item
+        Alignment = taRightJustify
+        Caption = '      Fo(x)'
+        MaxWidth = 100
+        MinWidth = 52
+        Width = 52
+      end
+      item
+        Alignment = taRightJustify
+        Caption = '      Sn(x)'
+        MaxWidth = 100
+        MinWidth = 52
+        Width = 52
+      end
+      item
+        Alignment = taRightJustify
+        Caption = '          D'
+        MaxWidth = 100
+        MinWidth = 52
+        Width = 52
+      end>
+    DragMode = dmAutomatic
+    RowSelect = True
+    ReadOnly = True
+    TabOrder = 1
+    ViewStyle = vsReport
+  end
+end

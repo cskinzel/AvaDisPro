@@ -1,0 +1,63 @@
+object FResumo: TFResumo
+  Left = 0
+  Top = 0
+  Width = 165
+  Height = 159
+  VertScrollBar.Range = 159
+  HorzScrollBar.Range = 165
+  Color = clButton
+  ParentColor = False
+  TabOrder = 0
+  object LVResumo: TListView
+    Left = 0
+    Top = 21
+    Width = 165
+    Height = 138
+    BorderStyle = bsSingle
+    Columns = <
+      item
+        Caption = 'Medida'
+        MaxWidth = 100
+        MinWidth = 50
+        Width = 88
+      end
+      item
+        Alignment = taRightJustify
+        Caption = 'Valor'
+        MaxWidth = 100
+        MinWidth = 50
+        Width = 75
+      end>
+    DragMode = dmAutomatic
+    RowSelect = True
+    ReadOnly = True
+    TabOrder = 0
+    ViewStyle = vsReport
+  end
+  object PResumo: TPanel
+    Left = 0
+    Top = 0
+    Width = 165
+    Height = 22
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    Caption = 'PResumo'
+    Color = clDark
+    ParentColor = False
+    TabOrder = 1
+    object LResumo: TLabel
+      Left = 53
+      Top = 2
+      Width = 59
+      Height = 18
+      Caption = 'Resumo'
+      Font.CharSet = fcsLatin1
+      Font.Color = clWhite
+      Font.Height = 15
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpVariable
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+end

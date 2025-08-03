@@ -1,0 +1,22 @@
+| AvaDisPro - Arquivo de Exemplo 2
+|
+| Notas de Tópicos em Informática IV
+|
+| O formato dos dados pode ser
+| em forma de matriz ou seqüencial.
+
+7,083333 
+7,466667 
+7,5 
+6 
+8,266667 
+6,791667 
+4,725 
+8,166667 
+8,313333 
+6 
+7,741667 
+1,21 
+4,166667
+
+| Por Claudio Kinzel, 20/6/2003
