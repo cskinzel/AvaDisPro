@@ -32,10 +32,8 @@ AvaDisPro is a support tool for selecting probability distributions. Given an in
 
 ## 📸 Screenshots
 
-User source data
 ![User source data](screenshots/user-source-data.jpg)
 
-Chi Square and KS test results
 ![Chi Square and KS test results](screenshots/chi-square-and-ks-test-results.jpg)
 
 
