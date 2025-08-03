@@ -1,0 +1,437 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="KS_arquivos/filelist.xml">
+<link rel=Edit-Time-Data href="KS_arquivos/editdata.mso">
+<link rel=OLE-Object-Data href="KS_arquivos/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Kolmogorov-Smirnov (K-S)</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Claudio Kinzel</o:Author>
+  <o:LastAuthor>Claudio Kinzel</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2003-09-18T20:51:00Z</o:Created>
+  <o:LastSaved>2003-09-18T20:52:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>192</o:Words>
+  <o:Characters>1043</o:Characters>
+  <o:Company>SK Informática</o:Company>
+  <o:Lines>8</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1233</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>16,35 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-noshow:yes;
+	mso-style-parent:"";
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman"; margin-left:0cm; margin-right:0cm; margin-top:0cm}
+h1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:21.6pt;
+	text-indent:-21.6pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:list 21.6pt;
+	font-size:18.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-name:"Título 2\',TIT 2'";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:28.8pt;
+	text-indent:-28.8pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo1;
+	tab-stops:list 28.8pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-bidi-font-style:italic}
+h3
+	{mso-style-update:auto;
+	margin-top:20.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:list 36.0pt;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-weight:bold;}
+span.MsoFootnoteReference
+	{mso-style-noshow:yes;
+	vertical-align:super;}
+p.Kinzel, li.Kinzel, div.Kinzel
+	{mso-style-name:Kinzel;
+	mso-style-update:auto;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:18.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.LinhaDivCent, li.LinhaDivCent, div.LinhaDivCent
+	{mso-style-name:"Linha Div\. \(Cent\)";
+	mso-style-update:auto;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:130%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:42.55pt 2.0cm 94.95pt 2.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1249996860;
+	mso-list-template-ids:-1163613290;}
+@list l0:level1
+	{mso-level-text:%1;
+	mso-level-tab-stop:21.6pt;
+	mso-level-number-position:left;
+	margin-left:21.6pt;
+	text-indent:-21.6pt;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:normal;}
+@list l0:level2
+	{mso-level-style-link:"Título 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:28.8pt;
+	mso-level-number-position:left;
+	margin-left:28.8pt;
+	text-indent:-28.8pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:normal;}
+@list l0:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:43.2pt;
+	mso-level-number-position:left;
+	margin-left:43.2pt;
+	text-indent:-43.2pt;}
+@list l0:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:50.4pt;
+	mso-level-number-position:left;
+	margin-left:50.4pt;
+	text-indent:-50.4pt;}
+@list l0:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:57.6pt;
+	mso-level-number-position:left;
+	margin-left:57.6pt;
+	text-indent:-57.6pt;}
+@list l0:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:64.8pt;
+	mso-level-number-position:left;
+	margin-left:64.8pt;
+	text-indent:-64.8pt;}
+@list l0:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+@list l0:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:79.2pt;
+	mso-level-number-position:left;
+	margin-left:79.2pt;
+	text-indent:-79.2pt;}
+@list l1
+	{mso-list-id:1460805871;
+	mso-list-template-ids:862649236;}
+@list l1:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+</style>
+<![endif]-->
+<!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+<base target="_self">
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h2 style='margin:20pt 10; mso-list:none; line-height:18pt; text-indent:-28pt' align="center">
+<font face="Verdana" size="4"><a name="_Toc50970345">Kolmogorov-Smirnov (K-S)</a></font></h2>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana">O teste Kolmogorov-Smirnov (K-S) é baseado na Função de Distribuição
+Empírica (FDE) [NIS 2002]. Dado <i style='mso-bidi-font-style:normal'>n</i>
+pontos de dados ordenados <i style='mso-bidi-font-style:normal'>Y<sub>1</sub></i>,
+<i style='mso-bidi-font-style:normal'>Y<sub>2</sub></i>, ..., <i
+style='mso-bidi-font-style:normal'>Y<sub>N</sub></i>, a FDE é definida como:</font></p>
+
+<p class=LinhaDivCent style="line-height: 18pt; margin-left: 10; margin-right: 10">
+<font face="Verdana"><sub><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:51pt;
+ height:30.75pt'>
+ <v:imagedata src="KS_arquivos/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=68 height=41
+src="KS_arquivos/image002.gif" v:shapes="_x0000_s1025"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1125412756">
+ </o:OLEObject>
+</xml><![endif]--></font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>onde <i
+style='mso-bidi-font-style:normal'>n(i)</i> é o número de pontos menor que <i
+style='mso-bidi-font-style:normal'>Y<sub>i</sub></i>, os quais são ordenados do
+menor ao maior valor.</font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>A figura <span
+style='mso-field-code:" REF FigKS "'>abaixo</span> representa a FDE com a função
+cumulativa da distribuição normal para 100 números aleatórios [NIS 2002]. O
+teste K-S é baseado na distância máxima entre estas duas curvas.</font></p>
+
+<p class=LinhaDivCent style="line-height: 18pt; margin-left: 10; margin-right: 10">
+<font face="Verdana"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:282.75pt;height:208.5pt'>
+ <v:imagedata src="KS_arquivos/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=377 height=278
+src="KS_arquivos/image004.jpg" v:shapes="_x0000_s1026"><![endif]></font></p>
+
+<p class=MsoCaption style="line-height: 18pt; margin-left: 10; margin-right: 10">
+<font face="Verdana" size="2">FPA da distribuição Normal versus FDA da distribuição empírica [NIS 
+2002, p. 323]</font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><o:p>&nbsp;</o:p></font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>O teste K-S é
+definido como [NIS 2002]:</font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>H<sub>0</sub>:
+Os dados seguem uma distribuição específica.</font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>H<sub>a</sub>:
+Os dados não seguem uma distribuição específica.</font><b style='mso-bidi-font-weight:
+normal'><o:p></o:p></b></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>A estatística
+do teste é definida como [NIS 2002]: </font> </p>
+
+<p class=LinhaDivCent style="line-height: 18pt; margin-left: 10; margin-right: 10">
+<font face="Verdana"><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:99pt;height:33.75pt'>
+ <v:imagedata src="KS_arquivos/image005.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=132 height=45
+src="KS_arquivos/image006.gif" v:shapes="_x0000_s1027"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1125412757">
+ </o:OLEObject>
+</xml><![endif]--></font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>onde <i
+style='mso-bidi-font-style:normal'>F</i> é a função cumulativa da distribuição
+que se está a testar</font><a style='mso-footnote-id:ftn1' href="#_ftn1"
+name="_ftnref1" title=""><span class=MsoFootnoteReference><span
+style='mso-special-character:footnote'><![if !supportFootnotes]><span style='font-size:12.0pt;font-family:"Verdana";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:PT-BR;mso-fareast-language:
+PT-BR;mso-bidi-language:AR-SA'>[1]</span><![endif]></span></span></a><font face="Verdana">. </font> </p>
+
+<p class=MsoNormal style="line-height: 18pt; margin-left: 10; margin-right: 10">
+<font face="Verdana"><span style='mso-tab-count:1'>            </span>A hipótese é
+rejeitada se a estatística do teste, <i style='mso-bidi-font-style:normal'>D</i>,
+é maior que o valor crítico obtido da tabela K-S</font><a style='mso-footnote-id:ftn2'
+href="#_ftn2" name="_ftnref2" title=""><span class=MsoFootnoteReference><span
+style='mso-special-character:footnote'><![if !supportFootnotes]><span style='font-size:12.0pt;font-family:"Verdana";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:PT-BR;mso-fareast-language:
+PT-BR;mso-bidi-language:AR-SA'>[2]</span><![endif]></span></span></a><font face="Verdana">. Caso
+contrário, a hipótese é aceita.</font></p>
+
+</div>
+
+<div style='mso-element:footnote-list'><![if !supportFootnotes]><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<![endif]>
+
+<div style='mso-element:footnote' id=ftn1>
+
+<p class=MsoFootnoteText><a style='mso-footnote-id:ftn1' href="#_ftnref1"
+name="_ftn1" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:PT-BR;mso-fareast-language:PT-BR;
+mso-bidi-language:AR-SA'>[1]</span></span><![endif]></span></span></a> Alguns
+autores consideram que o teste K-S deve ser aplicado somente em distribuições
+contínuas, como é o caso de <span style='mso-bidi-font-style:italic'>Nist/Sematech
+</span>[NIS 2002]. Entretanto, outros autores, como Law [LAW 2000] e Spiegel [SPI
+1972] não fazem essa separação, razão pela qual o AvaDisPro implementa o teste
+K-S para ambos tipos de dados (contínuo e discreto).</p>
+
+<p class=MsoFootnoteText><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<div style='mso-element:footnote' id=ftn2>
+
+<p class=MsoFootnoteText><a style='mso-footnote-id:ftn2' href="#_ftnref2"
+name="_ftn2" title=""><span class=MsoFootnoteReference><span style='mso-special-character:
+footnote'><![if !supportFootnotes]><span class=MsoFootnoteReference><span
+style='font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:PT-BR;mso-fareast-language:PT-BR;
+mso-bidi-language:AR-SA'>[2]</span></span><![endif]></span></span></a> Segundo
+Nist/Sematech [NIS 2002], existem algumas variações de valores de tabelas K-S
+na literatura, as quais consideram diferentes escalas para o teste K-S e regiões
+críticas. O AvaDisPro implementa a tabela disponível em <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Probability And
+Statistics: For Engineers And Scientists</span></i><span lang=EN-US
+style='mso-ansi-language:EN-US'>, de</span><span lang=EN-US> </span><span
+lang=EN-US style='mso-ansi-language:EN-US'>Hayter [HAY 1996].</span></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
