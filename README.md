@@ -36,8 +36,12 @@ To view AvaDisPro screenshots, [click here](#).
 
 ## ⬇️ Download
 
-You can download the **Windows version**, **GNU/Linux version**, and the **source code** from the [download section](#).
+You can download the **Windows version**, **GNU/Linux version**, and the **source code**.
 
 ## 📜 License
 
-See the [license file](#) for usage terms and conditions.
+This software is free for non-commercial use only.
+
+Permission to use, copy, modify, and distribute this program for evaluation, teaching, and/or research purposes only and without fee is hereby granted, providing that this copyright and permission notice appear on all copies and supporting documentation, and that similar conditions are imposed on any individual or organization to whom the program is distributed. The author makes no representation about the suitability of this software for any purpose.
+
+It is provided "as is" without express or implied warranty.
