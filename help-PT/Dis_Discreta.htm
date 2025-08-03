@@ -1,0 +1,395 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="Dis_Discreta_arquivos/filelist.xml">
+<link rel=Edit-Time-Data href="Dis_Discreta_arquivos/editdata.mso">
+<link rel=OLE-Object-Data href="Dis_Discreta_arquivos/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Conceito de Distribuição Discreta</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Claudio Kinzel</o:Author>
+  <o:LastAuthor>Claudio Kinzel</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2003-09-14T01:20:00Z</o:Created>
+  <o:LastSaved>2003-09-14T01:21:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>138</o:Words>
+  <o:Characters>748</o:Characters>
+  <o:Company>SK Informática</o:Company>
+  <o:Lines>6</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>885</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>16,35 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-noshow:yes;
+	mso-style-parent:"";
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman"; margin-left:0cm; margin-right:0cm; margin-top:0cm}
+h1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:21.6pt;
+	text-indent:-21.6pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:list 21.6pt;
+	font-size:18.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-name:"Título 2\',TIT 2; mso-style-next: Normal; text-indent: 
+               -28.8pt; mso-pagination: widow-orphan; page-break-after: avoid; 
+               mso-outline-level: 2; mso-list: l0 level2 lfo1; tab-stops: 
+               list 28.8pt; font-size: 12.0pt; mso-bidi-font-size: 14.0pt; 
+               font-family: Arial; mso-bidi-font-style: italic; margin-left: 
+               28.8pt; margin-right: 0cm; margin-top: 12.0pt; margin-bottom: 
+               3.0pt";
+	}
+h3
+	{mso-style-update:auto;
+	margin-top:20.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:list 36.0pt;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;}
+p.Kinzel, li.Kinzel, div.Kinzel
+	{mso-style-name:Kinzel;
+	mso-style-update:auto;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	line-height:18.0pt;
+	mso-line-height-rule:exactly;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.LinhaDivisora, li.LinhaDivisora, div.LinhaDivisora
+	{mso-style-name:"Linha Divisora";
+	mso-style-update:auto;
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:42.55pt 2.0cm 94.95pt 2.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-title-page:yes;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1249996860;
+	mso-list-template-ids:-1163613290;}
+@list l0:level1
+	{mso-level-text:%1;
+	mso-level-tab-stop:21.6pt;
+	mso-level-number-position:left;
+	margin-left:21.6pt;
+	text-indent:-21.6pt;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:normal;}
+@list l0:level2
+	{mso-level-style-link:"Título 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:28.8pt;
+	mso-level-number-position:left;
+	margin-left:28.8pt;
+	text-indent:-28.8pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:normal;}
+@list l0:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:43.2pt;
+	mso-level-number-position:left;
+	margin-left:43.2pt;
+	text-indent:-43.2pt;}
+@list l0:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:50.4pt;
+	mso-level-number-position:left;
+	margin-left:50.4pt;
+	text-indent:-50.4pt;}
+@list l0:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:57.6pt;
+	mso-level-number-position:left;
+	margin-left:57.6pt;
+	text-indent:-57.6pt;}
+@list l0:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:64.8pt;
+	mso-level-number-position:left;
+	margin-left:64.8pt;
+	text-indent:-64.8pt;}
+@list l0:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+@list l0:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:79.2pt;
+	mso-level-number-position:left;
+	margin-left:79.2pt;
+	text-indent:-79.2pt;}
+@list l1
+	{mso-list-id:1424106744;
+	mso-list-type:hybrid;
+	mso-list-template-ids:11972184 1201992896 68550681 68550683 68550671 68550681 68550683 68550671 68550681 68550683;}
+@list l1:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1460805871;
+	mso-list-template-ids:862649236;}
+@list l2:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabela normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+</style>
+<![endif]-->
+<base target="_self">
+<!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body lang=PT-BR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h2 style='margin-top:20pt;margin-right:0cm;margin-bottom:20pt;margin-left:
+28.8pt;mso-list:none' align="center"><font face="Verdana" size="4"><a name="_Toc50970324">Conceito de Distribuição Discreta</a></font></h2>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana">Uma função de probabilidade discreta, <sub><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:24.75pt;
+ height:17.25pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=33 height=23
+src="Dis_Discreta_arquivos/image002.gif" v:shapes="_x0000_s1025"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1124996856">
+ </o:OLEObject>
+</xml><![endif]-->, é uma função que satisfaz as seguintes propriedades [NIS
+2002]:</font></p>
+
+<p class=Kinzel style='margin-left:10;mso-list:l1 level1 lfo3;
+tab-stops:list 36.0pt; margin-right:10'><![if !supportLists]><![endif]><font face="Verdana"><span style='mso-tab-count:1'>            </span></font><![if !supportLists]><span style='mso-list:Ignore'><font face="Verdana">a)
+</font></span><![endif]><font face="Verdana">A
+probabilidade que <i style='mso-bidi-font-style:normal'>x</i> assuma um valor
+específico é <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:24.75pt;height:17.25pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=33 height=23
+src="Dis_Discreta_arquivos/image002.gif" v:shapes="_x0000_s1026"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1124996857">
+ </o:OLEObject>
+</xml><![endif]-->: <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:107.25pt;height:18pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image003.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=143 height=24
+src="Dis_Discreta_arquivos/image004.gif" v:shapes="_x0000_s1027"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1124996858">
+ </o:OLEObject>
+</xml><![endif]--></font></p>
+
+<p class=Kinzel style='margin-left:10;mso-list:l1 level1 lfo3;
+tab-stops:list 36.0pt; margin-right:10'><![if !supportLists]><![endif]><font face="Verdana"><span style='mso-tab-count:1'>            </span></font><![if !supportLists]><span style='mso-list:Ignore'><font face="Verdana">b)</font></span><![endif]><font face="Verdana"><sub> <!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:24.75pt;height:17.25pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=33 height=23
+src="Dis_Discreta_arquivos/image002.gif" v:shapes="_x0000_s1028"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1124996859">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>é não-negativo para
+todos números reais <i style='mso-bidi-font-style:normal'>x</i>.</font></p>
+
+<p class=Kinzel style='margin-left:10;mso-list:l1 level1 lfo3;
+tab-stops:list 36.0pt; margin-right:10'><![if !supportLists]>
+<![endif]><font face="Verdana"><span style='mso-tab-count:1'>            </span></font><![if !supportLists]><span style='mso-list:Ignore'><font face="Verdana">c)</font><span
+style='font-style:normal; font-variant:normal; font-weight:normal; font-family:Verdana'> </span></span>
+<![endif]><font face="Verdana">A
+soma de <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:24.75pt;height:17.25pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=33 height=23
+src="Dis_Discreta_arquivos/image002.gif" v:shapes="_x0000_s1029"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1124996860">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'> </span>de todas as
+possibilidades de x é 1, isto é: <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:48pt;height:27.75pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image005.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=64 height=37
+src="Dis_Discreta_arquivos/image006.gif" v:shapes="_x0000_s1030"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1124996861">
+ </o:OLEObject>
+</xml><![endif]--></font></p>
+
+<p class=Kinzel style='margin-left:10; margin-right:10'><font face="Verdana"><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>onde <i style='mso-bidi-font-style:normal'>j </i>representa os valores
+possíveis que <i style='mso-bidi-font-style:normal'>x</i> pode assumir e <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1031" type="#_x0000_t75" style='width:15.75pt;height:18.75pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image007.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=21 height=25
+src="Dis_Discreta_arquivos/image008.gif" v:shapes="_x0000_s1031"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1124996862">
+ </o:OLEObject>
+</xml><![endif]-->é a probabilidade em <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1032" type="#_x0000_t75" style='width:14.25pt;height:18.75pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image009.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=19 height=25
+src="Dis_Discreta_arquivos/image010.gif" v:shapes="_x0000_s1032"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1124996864">
+ </o:OLEObject>
+</xml><![endif]-->.</font></p>
+
+<p class=LinhaDivisora style="line-height: 18pt; margin-left:10; margin-right:10"><font face="Verdana" size="3"><o:p>&nbsp;</o:p></font></p>
+
+<p class=Kinzel style="margin-left: 10; margin-right: 10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>Como
+conseqüência das propriedades <i style='mso-bidi-font-style:normal'>b</i> e <i
+style='mso-bidi-font-style:normal'>c</i> tem-se que: <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_s1033" type="#_x0000_t75" style='width:60pt;height:17.25pt'>
+ <v:imagedata src="Dis_Discreta_arquivos/image011.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=80 height=23
+src="Dis_Discreta_arquivos/image012.gif" v:shapes="_x0000_s1033"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1124996865">
+ </o:OLEObject>
+</xml><![endif]-->.</font><o:p></o:p></p>
+
+<p class=MsoNormal style="line-height: 18pt; margin-left:10; margin-right:10"><font face="Verdana"><span style='mso-tab-count:1'>            </span>De acordo
+com essa definição, tem-se que uma função de probabilidade discreta é uma
+função que assume números discretos [NIS 2002]. Assim, a função que permite
+valores negativos ou valores maiores que um não é uma função de probabilidade.</font></p>
+
+</div>
+
+</body>
+
+</html>
