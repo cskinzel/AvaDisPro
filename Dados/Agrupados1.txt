@@ -1,0 +1,17 @@
+| AvaDisPro - Arquivo de Exemplo 1 (Dados Tabulados)
+|
+| O arquivo texto deve estar formatado conforme abaixo.
+|
+| O primeiro valor é o intervalo inicial, o segundo
+| o intervalo final e o último a quantidade de elementos
+| daquele intervalo.
+
+
+0  10  231
+10 20  98
+20 30  55
+30 40  31
+40 50  17
+50 60  7
+
+| Por Claudio Kinzel, 15/7/2003

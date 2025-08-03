@@ -1,0 +1,95 @@
+object FormDistro: TFormDistro
+  Left = 493
+  Top = 296
+  Width = 214
+  Height = 166
+  VertScrollBar.Range = 153
+  HorzScrollBar.Range = 206
+  ActiveControl = EPar1
+  BorderIcons = [biSystemMenu]
+  BorderStyle = fbsSingle
+  Caption = 'FormDistro'
+  Color = clBackground
+  Font.Color = clBlack
+  Font.Height = 11
+  Font.Name = 'Verdana'
+  Font.Pitch = fpVariable
+  Font.Style = []
+  Font.Weight = 40
+  ParentFont = False
+  Position = poOwnerFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  TextWidth = 7
+  object LPar1: TLabel
+    Left = 8
+    Top = 18
+    Width = 86
+    Height = 13
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Par1'
+  end
+  object LPar2: TLabel
+    Left = 8
+    Top = 54
+    Width = 86
+    Height = 13
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Par2'
+  end
+  object LPar3: TLabel
+    Left = 8
+    Top = 90
+    Width = 86
+    Height = 13
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Par3'
+  end
+  object EPar1: TEdit
+    Left = 101
+    Top = 14
+    Width = 105
+    Height = 21
+    TabOrder = 3
+  end
+  object EPar2: TEdit
+    Left = 101
+    Top = 50
+    Width = 105
+    Height = 21
+    TabOrder = 4
+  end
+  object EPar3: TEdit
+    Left = 101
+    Top = 86
+    Width = 105
+    Height = 21
+    TabOrder = 5
+  end
+  object BOK: TButton
+    Left = 20
+    Top = 128
+    Width = 75
+    Height = 25
+    Hint = 'Salva os par'#226'metros da distribui'#231#227'o escolhida.'
+    Caption = '&OK'
+    TabOrder = 6
+    OnClick = BotaoClick
+  end
+  object BTestar: TButton
+    Left = 116
+    Top = 128
+    Width = 75
+    Height = 25
+    Hint = 
+      'Testa a distribui'#231#227'o selecionada aplicando os testes qui-quadrad' +
+      'o e K-S.'
+    Cancel = True
+    Caption = '&Testar'
+    TabOrder = 7
+    OnClick = BotaoClick
+  end
+end

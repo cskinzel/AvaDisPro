@@ -1,0 +1,55 @@
+object FormGrafico: TFormGrafico
+  Left = 335
+  Top = 166
+  Width = 400
+  Height = 400
+  BorderIcons = [biSystemMenu]
+  Caption = 'AvaDisPro 1.0 - Gr'#225'fico do Agrupamento de Dados'
+  Color = clBackground
+  Constraints.MaxHeight = 600
+  Constraints.MaxWidth = 800
+  Constraints.MinHeight = 250
+  Constraints.MinWidth = 320
+  FormStyle = fsStayOnTop
+  Position = poOwnerFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  TextWidth = 6
+  object PlotPanel: TPlotPanel
+    Left = 0
+    Top = 0
+    Width = 400
+    Height = 400
+    Align = alClient
+    Caption = ' '
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    GridColor = clBackground
+    BackColor = clBackground
+    Margin = 10
+    XMax = 1
+    YMax = 1
+    XMarks = True
+    XMarksFont.Color = clBlack
+    XMarksFont.Height = 11
+    XMarksFont.Name = 'MS Shell Dlg'
+    XMarksFont.Pitch = fpVariable
+    XMarksFont.Style = []
+    XMarksFont.Weight = 40
+    XMarksInterval = 1
+    YMarks = True
+    YMarksFont.Color = clBlack
+    YMarksFont.Height = 11
+    YMarksFont.Name = 'MS Shell Dlg'
+    YMarksFont.Pitch = fpVariable
+    YMarksFont.Style = []
+    YMarksFont.Weight = 40
+    YMarksInterval = 1
+    PlotMode = pmBar
+    PlotPen.Color = clRed
+    PlotPen.Width = 40
+    Title = 'Histograma'
+    LayerOption = False
+  end
+end

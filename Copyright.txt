@@ -1,0 +1,29 @@
+Copyright(c) 2003  Claudio Kinzel (ckinzel@gmail.com)
+
+Este software é livre somente para fins não-comerciais!
+
+Permissão para usar, copiar, modificar  e  distribuir  este  programa 
+para fins de avaliação, ensino e/ou pesquisa é concedida esta licença 
+apenas e sem pagamento,  fornecendo  junto este copyright. O aviso de 
+permissão deve aparecer em todas as cópias e documentações  de  apoio, 
+e tais condições são impostas para qualquer pessoa física ou jurídica 
+para a qual o  software  é distribuído. O autor não se responsabiliza 
+pela qualidade deste software para qualquer tipo  de propósito.
+
+Este software é fornecido "como está" sem qualquer tipo de garantia.
+
+
+This software is free only for non-commercial use!
+
+Permission  to use,  copy,  modify  and distribute   this  program for
+evaluation, teaching and/or research purposes only and without  fee is
+hereby granted,  providing that this  copyright and  permission notice
+appear  on all copies and supporting  documentation,  and that similar
+conditions are imposed on any individual  or organization to  whom the
+program is distributed. The author makes no representation  about  the 
+suitability of this software for any purpose.
+
+It is provided "as is" without express or implied warranty.
+
+
+$Id: Copyright,v 1.0 11/09/2003 16:00:00 $
